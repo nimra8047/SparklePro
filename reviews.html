@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews | SparklePro Home Cleaning</title>
+  <meta name="description" content="Real client reviews for SparklePro. See what homeowners say about our regular cleans, deep cleans and move-out service.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--olive:#5C6B4A;--olive-dark:#3E4A32;--terracotta:#C66B4A;--terracotta-dark:#A35238;--terracotta-soft:#E8A08A;--bg:#F7F4EF;--bg-warm:#F0EBE3;--text:#2C2A26;--muted:#6B665E;--border:#E0D9CE;--white:#fff;--soft:#EDE8DF;--shadow:0 20px 50px rgba(62,74,50,.12)}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+    .reveal{opacity:0;transform:translateY(36px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+    .top-bar{background:var(--olive-dark);color:#fff;text-align:center;padding:11px 20px;font-size:12px;letter-spacing:.07em;text-transform:uppercase}.top-bar span{color:var(--terracotta-soft)}
+    header{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border)}
+    .nav{max-width:1400px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
+    .nav-left,.nav-right{display:flex;gap:26px;align-items:center;flex:1}.nav-right{justify-content:flex-end}
+    .logo{font-family:'Playfair Display',serif;font-size:25px;font-weight:500;color:var(--olive-dark);text-decoration:none}.logo span{color:var(--terracotta)}
+    .nav a{color:var(--text);text-decoration:none;font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;transition:color .25s}
+    .nav a:hover,.nav a.active{color:var(--terracotta)}
+    .btn{display:inline-block;padding:13px 26px;background:var(--olive);color:#fff;text-decoration:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .3s;border-radius:3px}
+    .btn:hover{background:var(--olive-dark);transform:translateY(-2px)}.btn-terracotta{background:var(--terracotta)}.btn-terracotta:hover{background:var(--terracotta-dark)}
+    .page-hero{padding:80px 40px 50px;text-align:center;background:var(--bg-warm)}
+    .page-hero .section-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;font-weight:600}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,48px);font-weight:500;color:var(--olive-dark);margin-bottom:14px}
+    .page-hero p{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto;font-weight:300}
+    section{padding:70px 40px}.container{max-width:1100px;margin:0 auto}
+    .testimonials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .testimonial{background:var(--white);padding:32px;border-radius:8px;border:1px solid var(--border)}
+    .testimonial .stars{color:var(--terracotta);font-size:14px;letter-spacing:2px;margin-bottom:14px}
+    .testimonial p{font-size:15px;color:var(--muted);font-weight:300;line-height:1.75;margin-bottom:20px;font-style:italic}
+    .testimonial .author{font-size:14px;font-weight:600;color:var(--olive-dark)}
+    .testimonial .author span{display:block;font-weight:300;color:var(--muted);font-size:12px;margin-top:3px}
+    .google-box{background:var(--soft);border-radius:8px;padding:36px;text-align:center;margin-top:50px}
+    .google-box h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--olive-dark);margin-bottom:10px}
+    .google-box p{font-size:15px;color:var(--muted);margin-bottom:20px;font-weight:300}
+    footer{background:var(--olive-dark);color:rgba(255,255,255,.72);padding:64px 40px 36px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:23px;color:#fff;margin-bottom:11px}.footer-brand span{color:var(--terracotta-soft)}
+    .footer-brand+p{font-size:14px;font-weight:300;max-width:260px;line-height:1.7}
+    .footer-col h4{font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:16px;font-weight:600;color:#fff}
+    .footer-col a,.footer-col p{display:block;font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;margin-bottom:9px;font-weight:300}
+    .footer-col a:hover{color:var(--terracotta-soft)}
+    .footer-bottom{max-width:1200px;margin:0 auto;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.4)}
+    @media(max-width:900px){.testimonials-grid{grid-template-columns:1fr}.nav-left{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr}section,.page-hero{padding:50px 22px}.nav{padding:15px 22px}}
+  </style>
+  <link rel="stylesheet" href="widget.css">
+</head>
+<body>
+  <div class="top-bar">First clean <span>15% off</span> · Fully insured · We bring the supplies</div>
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html" class="active">Reviews</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <a href="index.html" class="logo">SparklePro<span>.</span></a>
+      <div class="nav-right">
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn" style="padding:10px 18px;font-size:11px">Book a Clean</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <p class="section-label">Reviews</p>
+    <h1>What clients say after a few visits</h1>
+    <p>We’re not perfect, but we show up and we care. Here’s feedback from regulars and one-off clients.</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="testimonials-grid">
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>“I stopped feeling guilty about the weekends. They come every other Tuesday, the kitchen and bathrooms stay under control, and I finally have time for other things.”</p>
+          <div class="author">Sarah M.<span>Bi-weekly · 11 months</span></div>
+        </div>
+        <div class="testimonial reveal" style="transition-delay:.08s">
+          <div class="stars">★★★★★</div>
+          <p>“Move-out clean passed the inspection without any notes. Clear pricing, on time, and they actually cleaned inside the cupboards. Would use again in a heartbeat.”</p>
+          <div class="author">David & Lena K.<span>Move-out clean</span></div>
+        </div>
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>“Two kids, a dog, and a husband who tracks everything in. SparklePro keeps us from drowning. Same two women every time — that consistency matters.”</p>
+          <div class="author">Priya N.<span>Weekly service</span></div>
+        </div>
+        <div class="testimonial reveal" style="transition-delay:.08s">
+          <div class="stars">★★★★★</div>
+          <p>“First deep clean was excellent. They noted our preferences and the next regular visits have been just as thorough. Communication is easy and no upselling.”</p>
+          <div class="author">James R.<span>Deep + recurring</span></div>
+        </div>
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>“Booked for a post-renovation clean. The place was dusty and full of debris. They left it ready to move into. Fair price for the amount of work.”</p>
+          <div class="author">Elena T.<span>Post-renovation</span></div>
+        </div>
+        <div class="testimonial reveal" style="transition-delay:.08s">
+          <div class="stars">★★★★★</div>
+          <p>“We’ve tried three other services. SparklePro is the first that actually shows up when they say they will and does the job properly. That’s rare.”</p>
+          <div class="author">Marcus & Ana L.<span>Bi-weekly · 8 months</span></div>
+        </div>
+      </div>
+
+      <div class="google-box reveal">
+        <h3>See more reviews on Google</h3>
+        <p>We encourage every client to leave an honest review on our Google Business Profile.</p>
+        <a href="https://www.google.com/maps" target="_blank" rel="noopener" class="btn btn-terracotta">View Google reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">SparklePro<span>.</span></div>
+        <p>A small, insured cleaning team that keeps homes genuinely clean.</p>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="reviews.html">Reviews</a><a href="faq.html">FAQ</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="contact.html">Contact / Book</a><a href="services.html">Pricing</a></div>
+      <div class="footer-col"><h4>Get in touch</h4><p>hello@sparklepro.home</p><p>+1 (555) 391-7742</p><p>Mon–Sat · 8am–6pm</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 SparklePro</span><span>Insured · Consistent · Satisfaction guaranteed</span></div>
+  </footer>
+  <script>
+    const reveals=document.querySelectorAll('.reveal');
+    const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
+    reveals.forEach(el=>observer.observe(el));
+  </script>
+  <script src="widget.js" defer></script>
+</body>
+</html>

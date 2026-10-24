@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Cleaning Services & Pricing | SparklePro</title>
+  <meta name="description" content="SparklePro home cleaning services: regular cleans from $140, deep cleaning from $220, move-in/out from $280. Free quotes. Fully insured. First clean 15% off.">
+  <meta name="keywords" content="home cleaning prices, deep cleaning cost, move out cleaning service, residential cleaners pricing">
+  <link rel="canonical" href="https://sparklepro.home/services">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--olive:#5C6B4A;--olive-dark:#3E4A32;--terracotta:#C66B4A;--terracotta-dark:#A35238;--terracotta-soft:#E8A08A;--bg:#F7F4EF;--bg-warm:#F0EBE3;--text:#2C2A26;--muted:#6B665E;--border:#E0D9CE;--white:#fff;--soft:#EDE8DF}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    .reveal{opacity:0;transform:translateY(40px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+    .scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--terracotta),var(--olive));z-index:10000;width:0%}
+    .top-bar{background:var(--olive-dark);color:#fff;text-align:center;padding:11px 20px;font-size:12px;letter-spacing:.07em;text-transform:uppercase}.top-bar span{color:var(--terracotta-soft)}
+    header{position:sticky;top:0;z-index:100;background:rgba(247,244,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    header.scrolled{box-shadow:0 8px 30px rgba(62,74,50,.1)}
+    .nav{max-width:1400px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
+    .nav-left,.nav-right{display:flex;gap:26px;align-items:center;flex:1}.nav-right{justify-content:flex-end}
+    .logo{font-family:'Playfair Display',serif;font-size:25px;font-weight:500;color:var(--olive-dark);text-decoration:none}.logo span{color:var(--terracotta)}
+    .nav a{color:var(--text);text-decoration:none;font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;transition:color .25s}
+    .nav a:hover,.nav a.active{color:var(--terracotta)}
+    .btn{display:inline-block;padding:13px 26px;background:var(--olive);color:#fff;text-decoration:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .3s;border-radius:3px}
+    .btn:hover{background:var(--olive-dark);transform:translateY(-2px)}.btn-terracotta{background:var(--terracotta)}.btn-terracotta:hover{background:var(--terracotta-dark)}
+    .page-hero{padding:90px 40px 55px;text-align:center;background:var(--bg-warm)}
+    .page-hero .section-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;font-weight:600}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,48px);font-weight:500;color:var(--olive-dark);margin-bottom:14px}
+    .page-hero p{font-size:16px;color:var(--muted);max-width:540px;margin:0 auto;font-weight:300}
+    section{padding:70px 40px}.container{max-width:1100px;margin:0 auto}
+    .section-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;font-weight:600}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,36px);font-weight:500;margin-bottom:14px;color:var(--olive-dark)}
+    .service-block{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:28px;display:grid;grid-template-columns:120px 1fr 260px;align-items:stretch;transition:transform .4s,box-shadow .4s}
+    .service-block:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(62,74,50,.12)}
+    .svc-side{display:flex;align-items:center;justify-content:center;padding:24px}
+    .service-block:nth-child(1) .svc-side{background:linear-gradient(160deg,#5C6B4A,#8A9A72)}
+    .service-block:nth-child(2) .svc-side{background:linear-gradient(160deg,#C66B4A,#E8A08A)}
+    .service-block:nth-child(3) .svc-side{background:linear-gradient(160deg,#3E4A32,#5C6B4A)}
+    .svc-side svg{width:48px;height:48px;fill:none;stroke:#fff;stroke-width:1.5}
+    .svc-main{padding:32px 28px}
+    .svc-main h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:500;color:var(--olive-dark);margin-bottom:6px}
+    .svc-main .for{font-size:13px;color:var(--terracotta);font-weight:500;margin-bottom:12px}
+    .svc-main p{font-size:14.5px;color:var(--muted);font-weight:300;margin-bottom:14px;line-height:1.7}
+    .checklist{list-style:none;font-size:13.5px;color:var(--muted);columns:2;column-gap:20px}
+    .checklist li{padding:4px 0 4px 18px;position:relative;break-inside:avoid}
+    .checklist li::before{content:'✓';position:absolute;left:0;color:var(--terracotta);font-weight:600;font-size:12px}
+    .price-box{background:var(--soft);padding:28px 22px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+    .price-box .from{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+    .price-box .amount{font-family:'Playfair Display',serif;font-size:30px;color:var(--olive-dark);margin-bottom:6px}
+    .price-box .note{font-size:12px;color:var(--muted);margin-bottom:16px;line-height:1.4}
+    .extras{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+    .extra-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;transition:transform .3s,box-shadow .3s}
+    .extra-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(62,74,50,.1)}
+    .extra-card h4{font-size:14px;font-weight:600;color:var(--olive-dark);margin-bottom:4px}
+    .extra-card p{font-size:13px;color:var(--muted)}
+    .pricing-table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
+    .pricing-table th,.pricing-table td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border)}
+    .pricing-table th{background:var(--soft);font-weight:600;color:var(--olive-dark);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+    .pricing-table td{color:var(--muted)}.pricing-table .highlight{color:var(--terracotta);font-weight:600}
+    .quote-section{background:var(--bg-warm)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:start}
+    .info-block h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--olive-dark);margin-bottom:16px}
+    .info-item{margin-bottom:18px}
+    .info-item .label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--terracotta);font-weight:600;margin-bottom:3px}
+    .info-item p,.info-item a{font-size:14.5px;color:var(--muted);text-decoration:none;font-weight:300}
+    .info-item a:hover{color:var(--terracotta)}
+    .form-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:36px}
+    .form-card h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--olive-dark);margin-bottom:6px}
+    .form-card .sub{font-size:13.5px;color:var(--muted);margin-bottom:24px;font-weight:300}
+    .form-group{margin-bottom:14px}
+    .form-group label{display:block;font-size:11px;font-weight:600;color:var(--olive-dark);margin-bottom:5px;letter-spacing:.04em}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 13px;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:14px;background:var(--bg);color:var(--text)}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--olive)}
+    .form-group textarea{min-height:88px;resize:vertical}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .form-card .btn{width:100%;text-align:center;margin-top:4px}
+    .form-note{font-size:11px;color:var(--muted);margin-top:10px;text-align:center}
+    footer{background:var(--olive-dark);color:rgba(255,255,255,.72);padding:64px 40px 36px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:23px;color:#fff;margin-bottom:11px}.footer-brand span{color:var(--terracotta-soft)}
+    .footer-brand+p{font-size:14px;font-weight:300;max-width:260px;line-height:1.7}
+    .footer-col h4{font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:16px;font-weight:600;color:#fff}
+    .footer-col a,.footer-col p{display:block;font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;margin-bottom:9px;font-weight:300}
+    .footer-col a:hover{color:var(--terracotta-soft)}
+    .footer-bottom{max-width:1200px;margin:0 auto;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.4)}
+    @media(max-width:900px){.service-block{grid-template-columns:1fr}.svc-side{min-height:80px}.checklist{columns:1}.extras,.contact-grid,.form-row{grid-template-columns:1fr}.nav-left{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr}section,.page-hero{padding:50px 22px}.nav{padding:15px 22px}}
+  </style>
+  <link rel="stylesheet" href="widget.css">
+</head>
+<body>
+  <div class="scroll-progress" id="progress"></div>
+  <div class="top-bar">First clean <span>15% off</span> · Fully insured · We bring the supplies</div>
+  <header id="header">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="services.html" class="active">Services</a>
+        <a href="index.html#results">Results</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <a href="index.html" class="logo">SparklePro<span>.</span></a>
+      <div class="nav-right">
+        <a href="#quote">Contact</a>
+        <a href="#quote" class="btn" style="padding:10px 18px;font-size:11px">Book a Clean</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <p class="section-label reveal">Services & Pricing</p>
+    <h1 class="reveal">Home cleaning services with clear pricing</h1>
+    <p class="reveal">Regular house cleaning, deep cleans, and move-in/move-out packages. No hidden fees. Free quotes for every home size.</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="service-block reveal">
+        <div class="svc-side"><svg viewBox="0 0 48 48"><path d="M8 40V18l16-12 16 12v22H8z" stroke-linejoin="round"/><path d="M20 40V28h8v12"/><path d="M14 22h4M30 22h4M22 16v4"/></svg></div>
+        <div class="svc-main">
+          <h2>Regular home cleaning</h2>
+          <p class="for">Best for busy households who want consistent upkeep</p>
+          <p>Weekly or every-other-week visits that keep kitchens, bathrooms, floors and high-touch surfaces from getting out of hand. Same team when possible.</p>
+          <ul class="checklist">
+            <li>Kitchen counters, sink & stovetop</li>
+            <li>Bathrooms cleaned & sanitized</li>
+            <li>Floors vacuumed and mopped</li>
+            <li>Dusting of reachable surfaces</li>
+            <li>Beds made on request</li>
+            <li>Trash emptied</li>
+          </ul>
+        </div>
+        <div class="price-box">
+          <div class="from">Starting from</div>
+          <div class="amount">$140</div>
+          <div class="note">Typical 2-bed home</div>
+          <a href="#quote" class="btn btn-terracotta" style="width:100%;text-align:center;padding:11px">Get free quote</a>
+        </div>
+      </div>
+
+      <div class="service-block reveal">
+        <div class="svc-side"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="10"/><path d="M24 8v4M24 36v4M8 24h4M36 24h4M12.5 12.5l2.8 2.8M32.7 32.7l2.8 2.8M12.5 35.5l2.8-2.8M32.7 15.3l2.8-2.8"/><path d="M18 24h12" stroke-linecap="round"/></svg></div>
+        <div class="svc-main">
+          <h2>Deep cleaning</h2>
+          <p class="for">Best for first visits, seasonal resets, or after guests</p>
+          <p>Extra time on baseboards, inside the microwave and oven, light switches, cabinet fronts, and corners regular cleans skip.</p>
+          <ul class="checklist">
+            <li>Everything in a regular clean</li>
+            <li>Inside microwave & oven exterior</li>
+            <li>Baseboards & window sills</li>
+            <li>Cabinet fronts and handles</li>
+            <li>Detailed bathroom descaling</li>
+            <li>Behind accessible furniture</li>
+          </ul>
+        </div>
+        <div class="price-box">
+          <div class="from">Starting from</div>
+          <div class="amount">$220</div>
+          <div class="note">Typical 2-bed · First visit</div>
+          <a href="#quote" class="btn btn-terracotta" style="width:100%;text-align:center;padding:11px">Get free quote</a>
+        </div>
+      </div>
+
+      <div class="service-block reveal">
+        <div class="svc-side"><svg viewBox="0 0 48 48"><path d="M10 38V16l14-10 14 10v22H10z" stroke-linejoin="round"/><path d="M18 38V26h12v12"/><path d="M6 38h36" stroke-linecap="round"/><path d="M24 8v6"/></svg></div>
+        <div class="svc-main">
+          <h2>Move-in / Move-out cleaning</h2>
+          <p class="for">Best for empty homes, end of tenancy, new owners</p>
+          <p>Full top-to-bottom clean of an empty property with a checklist landlords and property managers appreciate.</p>
+          <ul class="checklist">
+            <li>All rooms, closets & cabinets</li>
+            <li>Appliance interiors</li>
+            <li>Windowsills, tracks & fixtures</li>
+            <li>Skirting boards and doors</li>
+            <li>Final walk-through option</li>
+          </ul>
+        </div>
+        <div class="price-box">
+          <div class="from">Starting from</div>
+          <div class="amount">$280</div>
+          <div class="note">Typical 2-bed empty home</div>
+          <a href="#quote" class="btn btn-terracotta" style="width:100%;text-align:center;padding:11px">Get free quote</a>
+        </div>
+      </div>
+
+      <p class="section-label reveal" style="margin-top:48px">Add-ons</p>
+      <h2 class="section-title reveal">Extras for any clean</h2>
+      <div class="extras reveal">
+        <div class="extra-card"><h4>Inside oven</h4><p>From $45</p></div>
+        <div class="extra-card"><h4>Inside fridge</h4><p>From $35</p></div>
+        <div class="extra-card"><h4>Interior windows</h4><p>From $60</p></div>
+        <div class="extra-card"><h4>Laundry & folding</h4><p>From $40</p></div>
+        <div class="extra-card"><h4>Inside cabinets</h4><p>From $50</p></div>
+        <div class="extra-card"><h4>Walls / skirting</h4><p>From $55</p></div>
+      </div>
+
+      <p class="section-label reveal" style="margin-top:56px">Pricing by home size</p>
+      <h2 class="section-title reveal">Typical starting rates</h2>
+      <p style="color:var(--muted);font-weight:300;margin-bottom:20px;max-width:520px;font-size:14.5px" class="reveal">Final price depends on condition, pets, and extras. First clean always 15% off.</p>
+      <table class="pricing-table reveal">
+        <thead><tr><th>Home size</th><th>Regular</th><th>Deep clean</th><th>Move-out</th></tr></thead>
+        <tbody>
+          <tr><td>Studio / 1 bed</td><td class="highlight">from $120</td><td>from $180</td><td>from $230</td></tr>
+          <tr><td>2 bedroom</td><td class="highlight">from $140</td><td>from $220</td><td>from $280</td></tr>
+          <tr><td>3 bedroom</td><td class="highlight">from $175</td><td>from $270</td><td>from $340</td></tr>
+          <tr><td>4+ bedroom</td><td class="highlight">Custom quote</td><td>Custom quote</td><td>Custom quote</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="quote-section" id="quote">
+    <div class="container">
+      <p class="section-label reveal">Request a quote</p>
+      <h2 class="section-title reveal">Tell us about your home</h2>
+      <p style="color:var(--muted);font-weight:300;margin-bottom:36px;max-width:500px;font-size:14.5px" class="reveal">We reply within one business day with a clear price. First clean 15% off.</p>
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="info-block">
+            <h3>Get in touch</h3>
+            <div class="info-item"><div class="label">Phone</div><p><a href="tel:+15553917742">+1 (555) 391-7742</a></p></div>
+            <div class="info-item"><div class="label">Email</div><p><a href="mailto:nimraabdulsattar2002@gmail.com">nimraabdulsattar2002@gmail.com</a></p></div>
+            <div class="info-item"><div class="label">Hours</div><p>Monday – Saturday · 8am–6pm</p></div>
+            <div class="info-item"><div class="label">Service area</div><p>Greater metro area and suburbs (approx. 25-mile radius).</p></div>
+          </div>
+        </div>
+        <div class="form-card reveal">
+          <h3>Book or request a quote</h3>
+          <p class="sub">Fields marked * are required.</p>
+          <form action="https://formsubmit.co/nimraabdulsattar2002@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="SparklePro Quote Request">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <div class="form-row">
+              <div class="form-group"><label for="name">Full name *</label><input type="text" id="name" name="name" required placeholder="Jane Smith"></div>
+              <div class="form-group"><label for="phone">Phone *</label><input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567"></div>
+            </div>
+            <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required placeholder="jane@email.com"></div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="service">Service type *</label>
+                <select id="service" name="service" required>
+                  <option value="">Select…</option>
+                  <option>Regular home clean</option>
+                  <option>Deep clean</option>
+                  <option>Move-in / Move-out</option>
+                  <option>Other / not sure</option>
+                </select>
+              </div>
+              <div class="form-group"><label for="date">Preferred date</label><input type="date" id="date" name="preferred_date"></div>
+            </div>
+            <div class="form-group">
+              <label for="heard">How did you hear about us?</label>
+              <select id="heard" name="heard_about_us"><option value="">Select…</option><option>Google</option><option>Friend / family</option><option>Social media</option><option>Nextdoor</option><option>Other</option></select>
+            </div>
+            <div class="form-group"><label for="message">Anything else?</label><textarea id="message" name="message" placeholder="Home size, pets, access notes…"></textarea></div>
+            <button type="submit" class="btn btn-terracotta">Send request</button>
+            <p class="form-note">We reply within one business day. First clean 15% off.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div><div class="footer-brand">SparklePro<span>.</span></div><p>Professional home cleaning — regular, deep, and move-out by a fully insured local team.</p></div>
+      <div class="footer-col"><h4>Pages</h4><a href="services.html">Services & Pricing</a><a href="index.html#results">Results</a><a href="index.html#reviews">Reviews</a><a href="faq.html">FAQ</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="#quote">Request a quote</a></div>
+      <div class="footer-col"><h4>Get in touch</h4><p>nimraabdulsattar2002@gmail.com</p><p>+1 (555) 391-7742</p><p>Mon–Sat · 8am–6pm</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 SparklePro</span><span>Insured · Consistent · Satisfaction guaranteed</span></div>
+  </footer>
+
+
+  <script>
+    const header=document.getElementById('header'),progress=document.getElementById('progress');
+    window.addEventListener('scroll',()=>{const sy=window.scrollY;progress.style.width=(sy/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';header.classList.toggle('scrolled',sy>40);},{passive:true});
+    document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(ents=>{ents.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1}).observe(el));
+  </script>
+  <script src="widget.js" defer></script>
+</body>
+</html>

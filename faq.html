@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | SparklePro Home Cleaning</title>
+  <meta name="description" content="Common questions about SparklePro: do I need to be home, supplies, rescheduling, insurance, service areas and more.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--olive:#5C6B4A;--olive-dark:#3E4A32;--terracotta:#C66B4A;--terracotta-dark:#A35238;--terracotta-soft:#E8A08A;--bg:#F7F4EF;--bg-warm:#F0EBE3;--text:#2C2A26;--muted:#6B665E;--border:#E0D9CE;--white:#fff;--soft:#EDE8DF}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+    .reveal{opacity:0;transform:translateY(36px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+    .top-bar{background:var(--olive-dark);color:#fff;text-align:center;padding:11px 20px;font-size:12px;letter-spacing:.07em;text-transform:uppercase}.top-bar span{color:var(--terracotta-soft)}
+    header{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border)}
+    .nav{max-width:1400px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
+    .nav-left,.nav-right{display:flex;gap:26px;align-items:center;flex:1}.nav-right{justify-content:flex-end}
+    .logo{font-family:'Playfair Display',serif;font-size:25px;font-weight:500;color:var(--olive-dark);text-decoration:none}.logo span{color:var(--terracotta)}
+    .nav a{color:var(--text);text-decoration:none;font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;transition:color .25s}
+    .nav a:hover,.nav a.active{color:var(--terracotta)}
+    .btn{display:inline-block;padding:13px 26px;background:var(--olive);color:#fff;text-decoration:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .3s;border-radius:3px}
+    .btn:hover{background:var(--olive-dark);transform:translateY(-2px)}.btn-terracotta{background:var(--terracotta)}.btn-terracotta:hover{background:var(--terracotta-dark)}
+    .page-hero{padding:80px 40px 50px;text-align:center;background:var(--bg-warm)}
+    .page-hero .section-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;font-weight:600}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,48px);font-weight:500;color:var(--olive-dark);margin-bottom:14px}
+    .page-hero p{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto;font-weight:300}
+    section{padding:70px 40px}.container{max-width:720px;margin:0 auto}
+    .faq-item{border-bottom:1px solid var(--border);padding:22px 0}
+    .faq-item summary{font-size:16px;font-weight:560;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--olive-dark)}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary::after{content:'+';font-size:22px;color:var(--terracotta);font-weight:300}
+    .faq-item[open] summary::after{content:'−'}
+    .faq-item p{margin-top:12px;font-size:15px;color:var(--muted);font-weight:300;line-height:1.75;max-width:620px}
+    footer{background:var(--olive-dark);color:rgba(255,255,255,.72);padding:64px 40px 36px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:23px;color:#fff;margin-bottom:11px}.footer-brand span{color:var(--terracotta-soft)}
+    .footer-brand+p{font-size:14px;font-weight:300;max-width:260px;line-height:1.7}
+    .footer-col h4{font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:16px;font-weight:600;color:#fff}
+    .footer-col a,.footer-col p{display:block;font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;margin-bottom:9px;font-weight:300}
+    .footer-col a:hover{color:var(--terracotta-soft)}
+    .footer-bottom{max-width:1200px;margin:0 auto;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.4)}
+    @media(max-width:900px){.nav-left{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr}section,.page-hero{padding:50px 22px}.nav{padding:15px 22px}}
+  </style>
+  <link rel="stylesheet" href="widget.css">
+</head>
+<body>
+  <div class="top-bar">First clean <span>15% off</span> · Fully insured · We bring the supplies</div>
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="services.html">Services</a>
+        <a href="index.html#results">Results</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="faq.html" class="active">FAQ</a>
+      </div>
+      <a href="index.html" class="logo">SparklePro<span>.</span></a>
+      <div class="nav-right">
+        <a href="services.html#quote">Contact</a>
+        <a href="services.html#quote" class="btn" style="padding:10px 18px;font-size:11px">Book a Clean</a>
+      </div>
+    </nav>
+  </header>
+  <div class="page-hero">
+    <p class="section-label">FAQ</p>
+    <h1>Straight answers</h1>
+    <p>Everything most people ask before booking. If something is not covered, just message us.</p>
+  </div>
+  <section>
+    <div class="container">
+      <details class="faq-item reveal"><summary>Do I need to be home during the cleaning?</summary><p>No. Many clients leave a key or use a lockbox / smart lock. We will send a short update when we are finished and note anything that needs your attention.</p></details>
+      <details class="faq-item reveal"><summary>Do you bring your own supplies and equipment?</summary><p>Yes. We bring all cleaning products and tools. We use effective, low-fragrance, pet- and kid-friendly formulas. If you prefer us to use your products, just let us know when booking.</p></details>
+      <details class="faq-item reveal"><summary>What if I need to reschedule or cancel?</summary><p>Just give us at least 24 hours notice and we will move your appointment at no charge. Last-minute cancellations may incur a small fee to cover the team time.</p></details>
+      <details class="faq-item reveal"><summary>Are you insured?</summary><p>Yes. We carry full liability insurance and every cleaner is background-checked. We are happy to provide proof of insurance on request.</p></details>
+      <details class="faq-item reveal"><summary>What areas do you serve?</summary><p>We currently cover the greater metro area and surrounding suburbs within about a 25-mile radius. If you are unsure whether we reach your postcode, just ask when you request a quote.</p></details>
+      <details class="faq-item reveal"><summary>How long does a typical clean take?</summary><p>A regular clean for a typical 2 to 3 bedroom home usually takes 2.5 to 4 hours. Deep cleans and move-outs take longer. We will give you a realistic time window with your quote.</p></details>
+      <details class="faq-item reveal"><summary>What if I am not happy with something?</summary><p>Tell us within 24 hours. We will come back and make it right at no extra cost. We would rather fix it than leave you frustrated.</p></details>
+      <details class="faq-item reveal"><summary>How should I prepare for the first visit?</summary><p>A light tidy of personal items helps us focus on cleaning rather than organizing. Clear kitchen counters and bathroom surfaces if you can — we will handle the rest.</p></details>
+      <details class="faq-item reveal"><summary>Do you offer one-off cleans or only recurring?</summary><p>Both. Many people start with a deep clean and then decide whether to set up a regular schedule. There is no obligation to continue.</p></details>
+      <div style="margin-top:48px;text-align:center" class="reveal">
+        <p style="color:var(--muted);margin-bottom:18px;font-weight:300">Still have a question?</p>
+        <a href="services.html#quote" class="btn btn-terracotta">Contact us</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-grid">
+      <div><div class="footer-brand">SparklePro<span>.</span></div><p>A small, insured cleaning team that keeps homes genuinely clean.</p></div>
+      <div class="footer-col"><h4>Pages</h4><a href="services.html">Services</a><a href="index.html#results">Results</a><a href="index.html#reviews">Reviews</a><a href="faq.html">FAQ</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="services.html#quote">Contact / Book</a><a href="services.html">Pricing</a></div>
+      <div class="footer-col"><h4>Get in touch</h4><p>nimraabdulsattar2002@gmail.com</p><p>+1 (555) 391-7742</p><p>Mon-Sat · 8am-6pm</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 SparklePro</span><span>Insured · Consistent · Satisfaction guaranteed</span></div>
+  </footer>
+  <script>
+    const reveals=document.querySelectorAll('.reveal');
+    const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
+    reveals.forEach(el=>observer.observe(el));
+  </script>
+
+
+  <script src="widget.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Book | SparklePro Home Cleaning</title>
+  <meta name="description" content="Request a free quote or book a clean with SparklePro. Phone, email, service area and contact form.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--olive:#5C6B4A;--olive-dark:#3E4A32;--terracotta:#C66B4A;--terracotta-dark:#A35238;--terracotta-soft:#E8A08A;--bg:#F7F4EF;--bg-warm:#F0EBE3;--text:#2C2A26;--muted:#6B665E;--border:#E0D9CE;--white:#fff;--soft:#EDE8DF}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+    .reveal{opacity:0;transform:translateY(36px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+    .top-bar{background:var(--olive-dark);color:#fff;text-align:center;padding:11px 20px;font-size:12px;letter-spacing:.07em;text-transform:uppercase}.top-bar span{color:var(--terracotta-soft)}
+    header{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border)}
+    .nav{max-width:1400px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
+    .nav-left,.nav-right{display:flex;gap:26px;align-items:center;flex:1}.nav-right{justify-content:flex-end}
+    .logo{font-family:'Playfair Display',serif;font-size:25px;font-weight:500;color:var(--olive-dark);text-decoration:none}.logo span{color:var(--terracotta)}
+    .nav a{color:var(--text);text-decoration:none;font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;transition:color .25s}
+    .nav a:hover,.nav a.active{color:var(--terracotta)}
+    .btn{display:inline-block;padding:13px 26px;background:var(--olive);color:#fff;text-decoration:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .3s;border-radius:3px}
+    .btn:hover{background:var(--olive-dark);transform:translateY(-2px)}.btn-terracotta{background:var(--terracotta)}.btn-terracotta:hover{background:var(--terracotta-dark)}
+    .page-hero{padding:80px 40px 50px;text-align:center;background:var(--bg-warm)}
+    .page-hero .section-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;font-weight:600}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,48px);font-weight:500;color:var(--olive-dark);margin-bottom:14px}
+    .page-hero p{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto;font-weight:300}
+    section{padding:70px 40px}.container{max-width:1100px;margin:0 auto}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:start}
+    .info-block h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--olive-dark);margin-bottom:18px}
+    .info-item{margin-bottom:22px}
+    .info-item .label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--terracotta);font-weight:600;margin-bottom:4px}
+    .info-item p,.info-item a{font-size:15px;color:var(--muted);text-decoration:none;font-weight:300}
+    .info-item a:hover{color:var(--terracotta)}
+    .map-placeholder{background:var(--soft);border-radius:8px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;margin-top:28px;border:1px solid var(--border)}
+    .form-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:36px}
+    .form-card h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--olive-dark);margin-bottom:8px}
+    .form-card .sub{font-size:14px;color:var(--muted);margin-bottom:28px;font-weight:300}
+    .form-group{margin-bottom:18px}
+    .form-group label{display:block;font-size:12px;font-weight:600;color:var(--olive-dark);margin-bottom:6px;letter-spacing:.04em}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:4px;font-family:inherit;font-size:14px;background:var(--bg);color:var(--text);transition:border-color .2s}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--olive)}
+    .form-group textarea{min-height:100px;resize:vertical}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .form-card .btn{width:100%;text-align:center;margin-top:8px}
+    .form-note{font-size:12px;color:var(--muted);margin-top:14px;text-align:center}
+    footer{background:var(--olive-dark);color:rgba(255,255,255,.72);padding:64px 40px 36px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:23px;color:#fff;margin-bottom:11px}.footer-brand span{color:var(--terracotta-soft)}
+    .footer-brand+p{font-size:14px;font-weight:300;max-width:260px;line-height:1.7}
+    .footer-col h4{font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:16px;font-weight:600;color:#fff}
+    .footer-col a,.footer-col p{display:block;font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;margin-bottom:9px;font-weight:300}
+    .footer-col a:hover{color:var(--terracotta-soft)}
+    .footer-bottom{max-width:1200px;margin:0 auto;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.4)}
+    @media(max-width:900px){.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.nav-left{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr}section,.page-hero{padding:50px 22px}.nav{padding:15px 22px}}
+  </style>
+  <link rel="stylesheet" href="widget.css">
+</head>
+<body>
+  <div class="top-bar">First clean <span>15% off</span> · Fully insured · We bring the supplies</div>
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <a href="index.html" class="logo">SparklePro<span>.</span></a>
+      <div class="nav-right">
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="btn" style="padding:10px 18px;font-size:11px">Book a Clean</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <p class="section-label">Contact / Book</p>
+    <h1>Request a free quote</h1>
+    <p>Tell us a little about your home and we will get back to you within one business day with a clear price.</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="info-block">
+            <h3>Get in touch</h3>
+            <div class="info-item">
+              <div class="label">Phone</div>
+              <p><a href="tel:+15553917742">+1 (555) 391-7742</a></p>
+            </div>
+            <div class="info-item">
+              <div class="label">Email</div>
+              <p><a href="mailto:hello@sparklepro.home">hello@sparklepro.home</a></p>
+            </div>
+            <div class="info-item">
+              <div class="label">Hours</div>
+              <p>Monday – Saturday<br>8:00 am – 6:00 pm</p>
+            </div>
+            <div class="info-item">
+              <div class="label">Service area</div>
+              <p>Greater metro area and surrounding suburbs (approx. 25-mile radius). Ask us if you are unsure.</p>
+            </div>
+          </div>
+          <div class="map-placeholder">
+            Map · Service area coverage
+          </div>
+        </div>
+
+        <div class="form-card reveal" style="transition-delay:.1s">
+          <h3>Book or request a quote</h3>
+          <p class="sub">All fields marked * are required. We never share your details.</p>
+          <form onsubmit="event.preventDefault(); alert('Thank you! This is a demo form. In a live site this would send your request to the team.');">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full name *</label>
+                <input type="text" id="name" name="name" required placeholder="Jane Smith">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="jane@email.com">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="service">Service type *</label>
+                <select id="service" name="service" required>
+                  <option value="">Select…</option>
+                  <option value="regular">Regular home clean</option>
+                  <option value="deep">Deep clean</option>
+                  <option value="move">Move-in / Move-out</option>
+                  <option value="other">Other / not sure</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="date">Preferred date</label>
+                <input type="date" id="date" name="date">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="heard">How did you hear about us?</label>
+              <select id="heard" name="heard">
+                <option value="">Select…</option>
+                <option value="google">Google search</option>
+                <option value="friend">Friend / family</option>
+                <option value="social">Social media</option>
+                <option value="nextdoor">Nextdoor</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Anything else we should know?</label>
+              <textarea id="message" name="message" placeholder="Home size, pets, special requests, access instructions…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-terracotta">Send request</button>
+            <p class="form-note">We reply within one business day. First clean 15% off.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">SparklePro<span>.</span></div>
+        <p>A small, insured cleaning team that keeps homes genuinely clean.</p>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="reviews.html">Reviews</a><a href="faq.html">FAQ</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="contact.html">Contact / Book</a><a href="services.html">Pricing</a></div>
+      <div class="footer-col"><h4>Get in touch</h4><p>hello@sparklepro.home</p><p>+1 (555) 391-7742</p><p>Mon–Sat · 8am–6pm</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 SparklePro</span><span>Insured · Consistent · Satisfaction guaranteed</span></div>
+  </footer>
+  <script>
+    const reveals=document.querySelectorAll('.reveal');
+    const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
+    reveals.forEach(el=>observer.observe(el));
+  </script>
+  <script src="widget.js" defer></script>
+</body>
+</html>

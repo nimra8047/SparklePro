@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SparklePro | Professional Home Cleaning Services Near You</title>
+  <meta name="description" content="SparklePro offers reliable home cleaning, deep cleaning, and move-in/move-out services. Fully insured local team. First clean 15% off. Book your free quote today.">
+  <meta name="keywords" content="home cleaning service, deep cleaning, move out cleaning, residential cleaners, house cleaning near me, SparklePro">
+  <meta property="og:title" content="SparklePro | Professional Home Cleaning Services">
+  <meta property="og:description" content="Reliable, insured home cleaning. Regular, deep, and move-out cleans. First visit 15% off.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://sparklepro.home/">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"SparklePro","description":"Professional home cleaning services including regular cleans, deep cleans, and move-in/move-out cleaning.","telephone":"+1-555-391-7742","email":"nimraabdulsattar2002@gmail.com","priceRange":"$$","openingHours":"Mo-Sa 08:00-18:00","areaServed":"Greater metro area"}
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--olive:#5C6B4A;--olive-dark:#3E4A32;--terracotta:#C66B4A;--terracotta-dark:#A35238;--terracotta-soft:#E8A08A;--bg:#F7F4EF;--bg-warm:#F0EBE3;--text:#2C2A26;--muted:#6B665E;--border:#E0D9CE;--white:#fff;--soft:#EDE8DF;--shadow:0 20px 50px rgba(62,74,50,.12);--shadow-soft:0 8px 30px rgba(62,74,50,.08)}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+    .intro-overlay{position:fixed;inset:0;background:var(--olive-dark);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .8s,visibility .8s}
+    .intro-overlay.hide{opacity:0;visibility:hidden;pointer-events:none}
+    .intro-logo{font-family:'Playfair Display',serif;font-size:48px;color:#fff;opacity:0;transform:translateY(30px) scale(.9);animation:introIn 1s .3s forwards}
+    .intro-logo span{color:var(--terracotta-soft)}
+    .intro-tag{color:var(--terracotta-soft);font-size:12px;letter-spacing:.25em;text-transform:uppercase;margin-top:16px;opacity:0;animation:introIn 1s .6s forwards}
+    @keyframes introIn{to{opacity:1;transform:translateY(0) scale(1)}}
+
+    .reveal{opacity:0;transform:translateY(50px) rotateX(10deg);transform-origin:center top;transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
+    .reveal.visible{opacity:1;transform:translateY(0) rotateX(0)}
+    .reveal-scale{opacity:0;transform:scale(.88);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
+    .reveal-scale.visible{opacity:1;transform:scale(1)}
+
+    .scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--terracotta),var(--olive));z-index:10000;width:0%}
+    .top-bar{background:var(--olive-dark);color:#fff;text-align:center;padding:11px 20px;font-size:12px;letter-spacing:.07em;text-transform:uppercase;position:relative;z-index:50}
+    .top-bar span{color:var(--terracotta-soft)}
+    header{position:sticky;top:0;z-index:100;background:rgba(247,244,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+    header.scrolled{box-shadow:0 8px 30px rgba(62,74,50,.1)}
+    .nav{max-width:1400px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
+    .nav-left,.nav-right{display:flex;gap:26px;align-items:center;flex:1}.nav-right{justify-content:flex-end}
+    .logo{font-family:'Playfair Display',serif;font-size:25px;font-weight:500;color:var(--olive-dark);text-decoration:none;transition:transform .3s}.logo:hover{transform:scale(1.05)}.logo span{color:var(--terracotta)}
+    .nav a{color:var(--text);text-decoration:none;font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;transition:color .25s}
+    .nav a:hover,.nav a.active{color:var(--terracotta)}
+    .btn{display:inline-block;padding:13px 26px;background:var(--olive);color:#fff;text-decoration:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .35s cubic-bezier(.22,1,.36,1);border-radius:3px}
+    .btn:hover{background:var(--olive-dark);transform:translateY(-3px) scale(1.02);box-shadow:0 12px 28px rgba(92,107,74,.35)}
+    .btn-terracotta{background:var(--terracotta)}.btn-terracotta:hover{background:var(--terracotta-dark)}
+    .btn-outline{background:transparent;color:var(--olive-dark);border:1.5px solid var(--olive)}.btn-outline:hover{background:var(--olive);color:#fff}
+
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+    .hero-bg{position:absolute;inset:-10%;background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80') center/cover;will-change:transform}
+    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(247,244,239,.94) 0%,rgba(247,244,239,.75) 45%,rgba(247,244,239,.25) 100%)}
+    .hero-content{position:relative;z-index:2;max-width:1400px;margin:0 auto;padding:0 40px;width:100%}
+    .hero .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta);font-weight:600;margin-bottom:16px;opacity:0;animation:heroIn 1s 1.4s forwards}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(44px,6.5vw,80px);font-weight:500;line-height:1.06;max-width:640px;margin-bottom:22px;color:var(--olive-dark);opacity:0;animation:heroIn 1s 1.55s forwards}
+    .hero p{font-size:17px;color:var(--muted);max-width:460px;margin-bottom:36px;font-weight:300;opacity:0;animation:heroIn 1s 1.7s forwards}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:heroIn 1s 1.85s forwards}
+    @keyframes heroIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+    section{padding:100px 40px;position:relative}
+    .container{max-width:1200px;margin:0 auto}
+    .section-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;font-weight:600}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,46px);font-weight:500;margin-bottom:16px;color:var(--olive-dark)}
+    .section-desc{font-size:16px;color:var(--muted);max-width:540px;font-weight:300;margin-bottom:44px}
+
+    /* THEMED SERVICE CARDS */
+    .services-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .svc-card{position:relative;background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--border);transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s;cursor:default}
+    .svc-card:hover{transform:translateY(-12px);box-shadow:0 32px 64px rgba(62,74,50,.16)}
+    .svc-visual{height:140px;position:relative;overflow:hidden}
+    .svc-visual::before{content:'';position:absolute;inset:0;opacity:.9}
+    .svc-card:nth-child(1) .svc-visual::before{background:linear-gradient(135deg,#5C6B4A 0%,#8A9A72 100%)}
+    .svc-card:nth-child(2) .svc-visual::before{background:linear-gradient(135deg,#C66B4A 0%,#E8A08A 100%)}
+    .svc-card:nth-child(3) .svc-visual::before{background:linear-gradient(135deg,#3E4A32 0%,#5C6B4A 100%)}
+    .svc-icon-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
+    .svc-icon-wrap svg{width:56px;height:56px;fill:none;stroke:#fff;stroke-width:1.5;opacity:.95}
+    .svc-body{padding:28px 26px 30px}
+    .svc-body h3{font-size:18px;font-weight:600;margin-bottom:8px;color:var(--olive-dark)}
+    .svc-body p{font-size:14px;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:18px;min-height:66px}
+    .svc-meta{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border)}
+    .svc-meta .price{font-size:15px;font-weight:600;color:var(--terracotta)}
+    .svc-meta .tag{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--soft);padding:5px 10px;border-radius:20px}
+
+    /* BA CARDS */
+    .ba-section{background:var(--white)}
+    .ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .ba-card{position:relative;background:var(--white);border-radius:12px;padding:10px 10px 16px;box-shadow:var(--shadow-soft);border:1px solid var(--border);transition:transform .5s,box-shadow .5s;cursor:pointer}
+    .ba-card:hover{transform:translateY(-10px);box-shadow:0 32px 64px rgba(62,74,50,.16)}
+    .ba-frame{position:relative;aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:var(--soft)}
+    .ba-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s}
+    .ba-frame .before{z-index:1}.ba-frame .after{z-index:2;clip-path:polygon(0 100%,0 100%,0 100%);transition:clip-path .85s cubic-bezier(.65,0,.35,1)}
+    .ba-card:hover .after{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+    .ba-card:hover .before{transform:scale(1.05)}.ba-card:hover .after{transform:scale(1.02)}
+    .ba-blade{position:absolute;top:-10%;left:-20%;width:140%;height:3px;background:linear-gradient(90deg,transparent,var(--terracotta),transparent);z-index:4;opacity:0;transform:rotate(-38deg) translateY(180%);transition:transform .85s cubic-bezier(.65,0,.35,1),opacity .3s;pointer-events:none;box-shadow:0 0 12px rgba(198,107,74,.5)}
+    .ba-card:hover .ba-blade{opacity:1;transform:rotate(-38deg) translateY(-180%)}
+    .sparkles{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transition:opacity .5s .35s}
+    .ba-card:hover .sparkles{opacity:1}
+    .sparkles span{position:absolute;width:4px;height:4px;background:#fff;border-radius:50%;box-shadow:0 0 6px #fff;animation:twinkle 1.8s ease-in-out infinite}
+    .sparkles span:nth-child(1){top:18%;left:22%}.sparkles span:nth-child(2){top:32%;left:68%;animation-delay:.3s}
+    .sparkles span:nth-child(3){top:55%;left:40%;animation-delay:.6s}.sparkles span:nth-child(4){top:70%;left:78%;animation-delay:.2s}
+    .sparkles span:nth-child(5){top:25%;left:85%;animation-delay:.9s}
+    @keyframes twinkle{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.2)}}
+    .ba-status{position:absolute;top:14px;left:14px;z-index:5;background:rgba(44,42,38,.72);color:#fff;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:20px;transition:background .4s}
+    .ba-card:hover .ba-status{background:var(--terracotta)}
+    .ba-status .after-text{display:none}.ba-card:hover .ba-status .before-text{display:none}.ba-card:hover .ba-status .after-text{display:inline}
+    .ba-caption{margin-top:14px;padding:0 4px;display:flex;justify-content:space-between;align-items:baseline}
+    .ba-caption h3{font-size:15px;font-weight:600;color:var(--olive-dark)}.ba-caption span{font-size:12px;color:var(--muted)}
+
+    /* REVIEWS - PROFILE CLUSTER */
+    .reviews-section{background:var(--bg-warm);overflow:visible;position:relative;z-index:2}
+    .review-stage{position:relative;min-height:520px;margin-top:12px;padding:100px 0 40px;overflow:visible}
+    .avatar{position:absolute;width:72px;height:72px;cursor:pointer;z-index:1;transition:z-index 0s}
+    .avatar .pic{width:100%;height:100%;border-radius:50%;overflow:hidden;border:3px solid var(--white);box-shadow:0 8px 24px rgba(62,74,50,.15);transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .avatar:hover{z-index:50}
+    .avatar:hover .pic{transform:scale(1.15);box-shadow:0 16px 40px rgba(62,74,50,.28)}
+    .avatar .bubble{position:absolute;bottom:calc(100% + 16px);left:50%;transform:translateX(-50%) translateY(10px) scale(.9);width:270px;background:var(--white);border-radius:14px;padding:16px 18px;box-shadow:0 20px 50px rgba(62,74,50,.2);border:1px solid var(--border);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .28s ease,transform .32s cubic-bezier(.22,1,.36,1),visibility .28s;z-index:60}
+    .avatar:hover .bubble{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0) scale(1);pointer-events:auto}
+    .avatar .bubble::after{content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%) rotate(45deg);width:12px;height:12px;background:var(--white);border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .avatar .bubble .stars{color:var(--terracotta);font-size:11px;letter-spacing:1px;margin-bottom:6px}
+    .avatar .bubble p{font-size:13px;color:var(--muted);font-weight:300;line-height:1.55;margin-bottom:10px;font-style:italic}
+    .avatar .bubble .name{font-size:12px;font-weight:600;color:var(--olive-dark)}
+    .avatar .bubble .name span{font-weight:300;color:var(--muted)}
+    /* random positions */
+    .avatar.a1{width:72px;height:72px;top:18%;left:8%}
+    .avatar.a2{width:88px;height:88px;top:12%;left:26%}
+    .avatar.a3{width:64px;height:64px;top:22%;left:48%}
+    .avatar.a4{width:80px;height:80px;top:14%;left:66%}
+    .avatar.a5{width:70px;height:70px;top:20%;left:86%;margin-left:-35px}
+    .avatar.a6{width:76px;height:76px;top:42%;left:12%}
+    .avatar.a7{width:92px;height:92px;top:48%;left:38%}
+    .avatar.a8{width:68px;height:68px;top:55%;left:62%}
+    .avatar.a9{width:84px;height:84px;top:40%;left:82%}
+    
+
+    .sticky-band{height:50vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--olive-dark)}
+    .sticky-band .band-text{font-family:'Playfair Display',serif;font-size:clamp(32px,6vw,72px);color:#fff;text-align:center;opacity:.2;transition:opacity .4s,transform .4s}
+    .sticky-band .band-text.active{opacity:1}
+
+    .cta{text-align:center;padding:110px 40px;background:linear-gradient(135deg,var(--olive),var(--olive-dark));color:#fff;position:relative;overflow:hidden}
+    .cta h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,46px);font-weight:500;margin-bottom:14px}
+    .cta p{font-size:16px;opacity:.8;max-width:440px;margin:0 auto 32px;font-weight:300}
+    .cta .btn{background:var(--terracotta)}.cta .btn:hover{background:var(--terracotta-dark)}
+
+    footer{background:var(--olive-dark);color:rgba(255,255,255,.72);padding:64px 40px 36px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:23px;color:#fff;margin-bottom:11px}.footer-brand span{color:var(--terracotta-soft)}
+    .footer-brand+p{font-size:14px;font-weight:300;max-width:260px;line-height:1.7}
+    .footer-col h4{font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:16px;font-weight:600;color:#fff}
+    .footer-col a,.footer-col p{display:block;font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;margin-bottom:9px;font-weight:300}
+    .footer-col a:hover{color:var(--terracotta-soft)}
+    .footer-bottom{max-width:1200px;margin:0 auto;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.4)}
+
+    @media(max-width:960px){
+      .services-preview,.ba-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .nav-left{display:none}
+      .review-stage{min-height:360px}
+      .avatar.a5,.avatar.a9{display:none}
+    }
+    @media(max-width:640px){
+      .footer-grid{grid-template-columns:1fr}
+      section{padding:70px 22px}
+      .nav{padding:15px 22px}
+      .hero{min-height:90vh}
+      .review-stage{min-height:320px}
+      .avatar.a3,.avatar.a4,.avatar.a8{display:none}
+    }
+  </style>
+  <link rel="stylesheet" href="widget.css">
+</head>
+<body>
+  <div class="scroll-progress" id="progress"></div>
+  <div class="intro-overlay" id="intro">
+    <div class="intro-logo">SparklePro<span>.</span></div>
+    <div class="intro-tag">Real homes. Real clean.</div>
+  </div>
+  <div class="top-bar">First clean <span>15% off</span> · Fully insured · We bring the supplies</div>
+  <header id="header">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-left">
+        <a href="services.html">Services</a>
+        <a href="#results">Results</a>
+        <a href="#reviews">Reviews</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <a href="index.html" class="logo">SparklePro<span>.</span></a>
+      <div class="nav-right">
+        <a href="services.html#quote">Contact</a>
+        <a href="services.html#quote" class="btn" style="padding:10px 18px;font-size:11px">Book a Clean</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-content" id="heroContent">
+      <p class="eyebrow">Local · Insured · Consistent</p>
+      <h1>Your home,<br>actually clean</h1>
+      <p>SparklePro is a small, fully insured home cleaning team that shows up on time, deep-cleans the spots other services skip, and leaves your house feeling calm again.</p>
+      <div class="hero-actions">
+        <a href="services.html#quote" class="btn btn-terracotta">Get a Free Quote</a>
+        <a href="#results" class="btn btn-outline">See Real Results</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="services-heading">
+    <div class="container">
+      <p class="section-label reveal">Home cleaning services</p>
+      <h2 class="section-title reveal" id="services-heading">Professional cleaning for every kind of home</h2>
+      <p class="section-desc reveal">From weekly upkeep to full move-out resets, our residential cleaners handle kitchens, bathrooms, floors, and the details that make a house feel truly clean.</p>
+      <div class="services-preview">
+        <article class="svc-card reveal">
+          <div class="svc-visual">
+            <div class="svc-icon-wrap">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V18l16-12 16 12v22H8z" stroke-linejoin="round"/><path d="M20 40V28h8v12"/><path d="M14 22h4M30 22h4M22 16v4"/></svg>
+            </div>
+          </div>
+          <div class="svc-body">
+            <h3>Regular home cleaning</h3>
+            <p>Weekly or bi-weekly visits that keep kitchens, bathrooms, and high-touch surfaces under control so your home never feels out of hand.</p>
+            <div class="svc-meta">
+              <span class="price">From $140</span>
+              <span class="tag">Most popular</span>
+            </div>
+          </div>
+        </article>
+        <article class="svc-card reveal" style="transition-delay:.1s">
+          <div class="svc-visual">
+            <div class="svc-icon-wrap">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="10"/><path d="M24 8v4M24 36v4M8 24h4M36 24h4M12.5 12.5l2.8 2.8M32.7 32.7l2.8 2.8M12.5 35.5l2.8-2.8M32.7 15.3l2.8-2.8"/><path d="M18 24h12" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+          <div class="svc-body">
+            <h3>Deep cleaning</h3>
+            <p>Baseboards, inside appliances, switch plates, and the corners regular cleans usually miss. Ideal for first visits and seasonal resets.</p>
+            <div class="svc-meta">
+              <span class="price">From $220</span>
+              <span class="tag">Thorough</span>
+            </div>
+          </div>
+        </article>
+        <article class="svc-card reveal" style="transition-delay:.2s">
+          <div class="svc-visual">
+            <div class="svc-icon-wrap">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 38V16l14-10 14 10v22H10z" stroke-linejoin="round"/><path d="M18 38V26h12v12"/><path d="M6 38h36" stroke-linecap="round"/><path d="M24 8v6"/></svg>
+            </div>
+          </div>
+          <div class="svc-body">
+            <h3>Move-in / Move-out</h3>
+            <p>Empty-home top-to-bottom cleaning so you can hand over keys or walk into a ready space. Landlord and agent friendly checklist.</p>
+            <div class="svc-meta">
+              <span class="price">From $280</span>
+              <span class="tag">Empty homes</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:44px" class="reveal">
+        <a href="services.html" class="btn btn-outline">View full services & pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky-band">
+    <div class="band-text" id="bandText">Clean that you can feel.</div>
+  </div>
+
+  <section class="ba-section" id="results" aria-labelledby="results-heading">
+    <div class="container">
+      <p class="section-label reveal">Before & after results</p>
+      <h2 class="section-title reveal" id="results-heading">Real homes. Real difference.</h2>
+      <p class="section-desc reveal">Hover any photo to watch a soft cleaning stroke reveal the finished room. These are actual recent SparklePro jobs.</p>
+      <div class="ba-grid">
+        <div class="ba-card reveal-scale">
+          <div class="ba-frame">
+            <img class="before" src="https://images.unsplash.com/photo-1649954596857-1e8c87d53ae3?auto=format&fit=crop&w=900&q=80" alt="Messy kitchen before professional home cleaning">
+            <img class="after" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80" alt="Sparkling clean kitchen after SparklePro deep clean">
+            <div class="ba-blade"></div>
+            <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
+          </div>
+          <div class="ba-caption"><h3>Kitchen reset</h3><span>2.5 hrs · Deep clean</span></div>
+        </div>
+        <div class="ba-card reveal-scale" style="transition-delay:.12s">
+          <div class="ba-frame">
+            <img class="before" src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=900&q=80" alt="Cluttered bedroom before house cleaning">
+            <img class="after" src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80" alt="Tidy living area after regular home cleaning service">
+            <div class="ba-blade"></div>
+            <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
+          </div>
+          <div class="ba-caption"><h3>Bedroom & living</h3><span>Recurring visit</span></div>
+        </div>
+        <div class="ba-card reveal-scale" style="transition-delay:.24s">
+          <div class="ba-frame">
+            <img class="before" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Bathroom before descaling and deep clean">
+            <img class="after" src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80" alt="Fresh bathroom after professional deep cleaning">
+            <div class="ba-blade"></div>
+            <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
+          </div>
+          <div class="ba-caption"><h3>Bathroom detail</h3><span>Descaling + polish</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews-section" id="reviews" aria-labelledby="reviews-heading">
+    <div class="container">
+      <p class="section-label reveal">Client reviews</p>
+      <h2 class="section-title reveal" id="reviews-heading">Hover a face. Read their story.</h2>
+      <p class="section-desc reveal">Real feedback from homeowners who trust SparklePro with their kitchens, bathrooms, and busy family spaces.</p>
+      <div class="review-stage reveal">
+        <div class="avatar a1"><div class="pic"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Sarah M. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"I stopped feeling guilty about the weekends. They come every other Tuesday and the kitchen stays under control."</p><div class="name">Sarah M. <span>· Bi-weekly</span></div></div>
+        </div>
+        <div class="avatar a2"><div class="pic"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="David K. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Move-out clean passed inspection with zero notes. Clear pricing and they cleaned inside the cupboards."</p><div class="name">David K. <span>· Move-out</span></div></div>
+        </div>
+        <div class="avatar a3"><div class="pic"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="Priya N. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Two kids and a dog. Same two cleaners every time — that consistency is rare and it matters."</p><div class="name">Priya N. <span>· Weekly</span></div></div>
+        </div>
+        <div class="avatar a4"><div class="pic"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="James R. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Deep clean was excellent. They noted our preferences and the regular visits have been just as thorough."</p><div class="name">James R. <span>· Deep + recurring</span></div></div>
+        </div>
+        <div class="avatar a5"><div class="pic"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Elena T. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Post-renovation clean left the place ready to move into. Fair price for the amount of dust and debris."</p><div class="name">Elena T. <span>· Post-reno</span></div></div>
+        </div>
+        <div class="avatar a6"><div class="pic"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Marcus L. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"We've tried three other services. SparklePro is the first that shows up when they say and does the job properly."</p><div class="name">Marcus L. <span>· Bi-weekly</span></div></div>
+        </div>
+        <div class="avatar a7"><div class="pic"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Ana L. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Communication is easy, no upselling, and the bathrooms actually look and smell clean for days."</p><div class="name">Ana L. <span>· Weekly</span></div></div>
+        </div>
+        <div class="avatar a8"><div class="pic"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Lena K. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Booked for end of tenancy. Keys handed over the same afternoon. Would use again in a heartbeat."</p><div class="name">Lena K. <span>· Move-out</span></div></div>
+        </div>
+        <div class="avatar a9"><div class="pic"><img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80" alt="Tom H. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Reliable, careful with our furniture, and the quote matched the final invoice. Refreshing honesty."</p><div class="name">Tom H. <span>· Regular</span></div></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:20px" class="reveal">
+        <a href="https://www.google.com/maps" target="_blank" rel="noopener" class="btn btn-outline">See more reviews on Google</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 class="reveal">Ready for a home that stays clean?</h2>
+    <p class="reveal">First visit is 15% off. No long contracts. Just solid work from a local insured team.</p>
+    <a href="services.html#quote" class="btn reveal">Request a Free Quote</a>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">SparklePro<span>.</span></div>
+        <p>Professional home cleaning services — regular, deep, and move-out cleans by a fully insured local team.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="services.html">Services & Pricing</a>
+        <a href="#results">Results</a>
+        <a href="#reviews">Reviews</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="services.html#quote">Request a quote</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <p>nimraabdulsattar2002@gmail.com</p>
+        <p>+1 (555) 391-7742</p>
+        <p>Mon–Sat · 8am–6pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SparklePro. All rights reserved.</span>
+      <span>Insured · Consistent · Satisfaction guaranteed</span>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load',()=>setTimeout(()=>document.getElementById('intro').classList.add('hide'),2200));
+    const header=document.getElementById('header');
+    const progress=document.getElementById('progress');
+    const heroBg=document.getElementById('heroBg');
+    const heroContent=document.getElementById('heroContent');
+    const bandText=document.getElementById('bandText');
+    function onScroll(){
+      const sy=window.scrollY;
+      const docH=document.documentElement.scrollHeight-window.innerHeight;
+      progress.style.width=(sy/docH*100)+'%';
+      header.classList.toggle('scrolled',sy>40);
+      if(sy<window.innerHeight){
+        const p=sy/window.innerHeight;
+        heroBg.style.transform=`scale(${1.08-p*0.06}) translateY(${sy*0.35}px)`;
+        heroContent.style.transform=`translateY(${sy*0.18}px)`;
+        heroContent.style.opacity=Math.max(0,1-p*1.15);
+      }
+      const band=document.querySelector('.sticky-band');
+      if(band){
+        const r=band.getBoundingClientRect();
+        const mid=window.innerHeight/2;
+        const dist=Math.abs(r.top+r.height/2-mid);
+        const active=dist<r.height*0.55;
+        bandText.classList.toggle('active',active);
+        if(active){const t=1-dist/(r.height*0.55);bandText.style.transform=`scale(${0.88+t*0.12})`;}
+      }
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+    const reveals=document.querySelectorAll('.reveal,.reveal-scale');
+    const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(el=>observer.observe(el));
+  </script>
+  <script src="widget.js" defer></script>
+</body>
+</html>

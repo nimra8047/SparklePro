@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Before & After | SparklePro</title>
+  <meta name="description" content="Real before-and-after photos from SparklePro home cleans. See the difference our team makes.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--olive:#5C6B4A;--olive-dark:#3E4A32;--terracotta:#C66B4A;--terracotta-dark:#A35238;--terracotta-soft:#E8A08A;--bg:#F7F4EF;--bg-warm:#F0EBE3;--text:#2C2A26;--muted:#6B665E;--border:#E0D9CE;--white:#fff;--soft:#EDE8DF;--shadow:0 20px 50px rgba(62,74,50,.12);--shadow-soft:0 8px 30px rgba(62,74,50,.08)}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+    .reveal{opacity:0;transform:translateY(36px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-scale{opacity:0;transform:scale(.94);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}.reveal-scale.visible{opacity:1;transform:scale(1)}
+    .top-bar{background:var(--olive-dark);color:#fff;text-align:center;padding:11px 20px;font-size:12px;letter-spacing:.07em;text-transform:uppercase}.top-bar span{color:var(--terracotta-soft)}
+    header{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border)}
+    .nav{max-width:1400px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
+    .nav-left,.nav-right{display:flex;gap:26px;align-items:center;flex:1}.nav-right{justify-content:flex-end}
+    .logo{font-family:'Playfair Display',serif;font-size:25px;font-weight:500;color:var(--olive-dark);text-decoration:none}.logo span{color:var(--terracotta)}
+    .nav a{color:var(--text);text-decoration:none;font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;transition:color .25s}
+    .nav a:hover,.nav a.active{color:var(--terracotta)}
+    .btn{display:inline-block;padding:13px 26px;background:var(--olive);color:#fff;text-decoration:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .3s;border-radius:3px}
+    .btn:hover{background:var(--olive-dark);transform:translateY(-2px)}.btn-terracotta{background:var(--terracotta)}.btn-terracotta:hover{background:var(--terracotta-dark)}
+    .page-hero{padding:80px 40px 50px;text-align:center;background:var(--bg-warm)}
+    .page-hero .section-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;font-weight:600}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,48px);font-weight:500;color:var(--olive-dark);margin-bottom:14px}
+    .page-hero p{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto;font-weight:300}
+    section{padding:70px 40px}.container{max-width:1200px;margin:0 auto}
+    .section-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;font-weight:600}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,36px);font-weight:500;margin-bottom:14px;color:var(--olive-dark)}
+    .section-desc{font-size:16px;color:var(--muted);max-width:520px;font-weight:300;margin-bottom:40px}
+
+    /* Unique BA cards */
+    .ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .ba-card{position:relative;background:var(--white);border-radius:8px;padding:10px 10px 14px;box-shadow:var(--shadow-soft);border:1px solid var(--border);transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s;cursor:pointer}
+    .ba-card:hover{transform:translateY(-10px);box-shadow:0 28px 55px rgba(62,74,50,.14)}
+    .ba-frame{position:relative;aspect-ratio:4/5;border-radius:5px;overflow:hidden;background:var(--soft)}
+    .ba-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.22,1,.36,1)}
+    .ba-frame .before{z-index:1}
+    .ba-frame .after{z-index:2;clip-path:polygon(0 100%,0 100%,0 100%);transition:clip-path .85s cubic-bezier(.65,0,.35,1)}
+    .ba-card:hover .after{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+    .ba-card:hover .before{transform:scale(1.04)}.ba-card:hover .after{transform:scale(1.02)}
+    .ba-blade{position:absolute;top:-10%;left:-20%;width:140%;height:3px;background:linear-gradient(90deg,transparent,var(--terracotta),transparent);z-index:4;opacity:0;transform:rotate(-38deg) translateY(180%);transition:transform .85s cubic-bezier(.65,0,.35,1),opacity .3s;pointer-events:none;box-shadow:0 0 12px rgba(198,107,74,.5)}
+    .ba-card:hover .ba-blade{opacity:1;transform:rotate(-38deg) translateY(-180%)}
+    .sparkles{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transition:opacity .5s .35s}
+    .ba-card:hover .sparkles{opacity:1}
+    .sparkles span{position:absolute;width:4px;height:4px;background:#fff;border-radius:50%;box-shadow:0 0 6px rgba(255,255,255,.9);animation:twinkle 1.8s ease-in-out infinite}
+    .sparkles span:nth-child(1){top:18%;left:22%}.sparkles span:nth-child(2){top:32%;left:68%;animation-delay:.3s}
+    .sparkles span:nth-child(3){top:55%;left:40%;animation-delay:.6s}.sparkles span:nth-child(4){top:70%;left:78%;animation-delay:.2s}
+    .sparkles span:nth-child(5){top:25%;left:85%;animation-delay:.9s}
+    @keyframes twinkle{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.2)}}
+    .ba-status{position:absolute;top:14px;left:14px;z-index:5;background:rgba(44,42,38,.72);color:#fff;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:20px;transition:background .4s,transform .4s}
+    .ba-card:hover .ba-status{background:var(--terracotta);transform:scale(1.05)}
+    .ba-status .after-text{display:none}.ba-card:hover .ba-status .before-text{display:none}.ba-card:hover .ba-status .after-text{display:inline}
+    .ba-caption{margin-top:14px;padding:0 4px;display:flex;justify-content:space-between;align-items:baseline}
+    .ba-caption h3{font-size:15px;font-weight:600;color:var(--olive-dark)}.ba-caption span{font-size:12px;color:var(--muted)}
+
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+    .team-item{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:8px}
+    .team-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+    .team-item:hover img{transform:scale(1.05)}
+    .team-item .label{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;font-size:13px;font-weight:500}
+
+    footer{background:var(--olive-dark);color:rgba(255,255,255,.72);padding:64px 40px 36px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:23px;color:#fff;margin-bottom:11px}.footer-brand span{color:var(--terracotta-soft)}
+    .footer-brand+p{font-size:14px;font-weight:300;max-width:260px;line-height:1.7}
+    .footer-col h4{font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:16px;font-weight:600;color:#fff}
+    .footer-col a,.footer-col p{display:block;font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;margin-bottom:9px;font-weight:300}
+    .footer-col a:hover{color:var(--terracotta-soft)}
+    .footer-bottom{max-width:1200px;margin:0 auto;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.4)}
+    @media(max-width:900px){.ba-grid,.team-grid{grid-template-columns:1fr 1fr}.nav-left{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.ba-grid,.team-grid,.footer-grid{grid-template-columns:1fr}section,.page-hero{padding:50px 22px}.nav{padding:15px 22px}}
+  </style>
+  <link rel="stylesheet" href="widget.css">
+</head>
+<body>
+  <div class="top-bar">First clean <span>15% off</span> · Fully insured · We bring the supplies</div>
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <a href="index.html" class="logo">SparklePro<span>.</span></a>
+      <div class="nav-right">
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn" style="padding:10px 18px;font-size:11px">Book a Clean</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <p class="section-label">Gallery</p>
+    <h1>Proof, not promises</h1>
+    <p>Real rooms from recent jobs. Hover any card to watch a soft cleaning stroke reveal the finished result.</p>
+  </div>
+
+  <section style="background:var(--white)">
+    <div class="container">
+      <p class="section-label reveal">Before & After</p>
+      <h2 class="section-title reveal">Hover to see the difference</h2>
+      <div class="ba-grid">
+        <div class="ba-card reveal-scale">
+          <div class="ba-frame">
+            <img class="before" src="https://images.unsplash.com/photo-1649954596857-1e8c87d53ae3?auto=format&fit=crop&w=900&q=80" alt="Kitchen before">
+            <img class="after" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80" alt="Kitchen after">
+            <div class="ba-blade"></div>
+            <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
+          </div>
+          <div class="ba-caption"><h3>Kitchen reset</h3><span>2.5 hrs · Deep clean</span></div>
+        </div>
+        <div class="ba-card reveal-scale" style="transition-delay:.1s">
+          <div class="ba-frame">
+            <img class="before" src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=900&q=80" alt="Bedroom before">
+            <img class="after" src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80" alt="Living after">
+            <div class="ba-blade"></div>
+            <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
+          </div>
+          <div class="ba-caption"><h3>Bedroom & living</h3><span>Recurring visit</span></div>
+        </div>
+        <div class="ba-card reveal-scale" style="transition-delay:.2s">
+          <div class="ba-frame">
+            <img class="before" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Bathroom before">
+            <img class="after" src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80" alt="Bathroom after">
+            <div class="ba-blade"></div>
+            <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
+          </div>
+          <div class="ba-caption"><h3>Bathroom detail</h3><span>Descaling + polish</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <p class="section-label reveal">At work</p>
+      <h2 class="section-title reveal">The team in action</h2>
+      <p class="section-desc reveal">A few candid moments from recent cleans. We bring the supplies and the care.</p>
+      <div class="team-grid">
+        <div class="team-item reveal-scale">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Cleaning surfaces">
+          <div class="label">Detail work on surfaces</div>
+        </div>
+        <div class="team-item reveal-scale" style="transition-delay:.08s">
+          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80" alt="Kitchen cleaning">
+          <div class="label">Kitchen focus</div>
+        </div>
+        <div class="team-item reveal-scale" style="transition-delay:.16s">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Organized space">
+          <div class="label">Finished living area</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:48px" class="reveal">
+        <a href="contact.html" class="btn btn-terracotta">Book your clean</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">SparklePro<span>.</span></div>
+        <p>A small, insured cleaning team that keeps homes genuinely clean.</p>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="reviews.html">Reviews</a><a href="faq.html">FAQ</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="contact.html">Contact / Book</a><a href="services.html">Pricing</a></div>
+      <div class="footer-col"><h4>Get in touch</h4><p>hello@sparklepro.home</p><p>+1 (555) 391-7742</p><p>Mon–Sat · 8am–6pm</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 SparklePro</span><span>Insured · Consistent · Satisfaction guaranteed</span></div>
+  </footer>
+  <script>
+    const reveals=document.querySelectorAll('.reveal,.reveal-scale');
+    const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
+    reveals.forEach(el=>observer.observe(el));
+  </script>
+  <script src="widget.js" defer></script>
+</body>
+</html>
