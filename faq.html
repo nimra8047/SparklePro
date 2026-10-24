@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add("js")</script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>FAQ | SparklePro Home Cleaning</title>
   <meta name="description" content="Common questions about SparklePro: do I need to be home, supplies, rescheduling, insurance, service areas and more.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
@@ -42,6 +43,7 @@
     @media(max-width:900px){.nav-left{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:640px){.footer-grid{grid-template-columns:1fr}section,.page-hero{padding:50px 22px}.nav{padding:15px 22px}}
   </style>
+  <link rel="stylesheet" href="enhance.css">
   <link rel="stylesheet" href="widget.css">
 </head>
 <body>
@@ -62,12 +64,11 @@
     </nav>
   </header>
   <div class="page-hero">
-    <p class="section-label">FAQ</p>
     <h1>Straight answers</h1>
     <p>Everything most people ask before booking. If something is not covered, just message us.</p>
   </div>
   <section>
-    <div class="container">
+    <div class="container narrow">
       <details class="faq-item reveal"><summary>Do I need to be home during the cleaning?</summary><p>No. Many clients leave a key or use a lockbox / smart lock. We will send a short update when we are finished and note anything that needs your attention.</p></details>
       <details class="faq-item reveal"><summary>Do you bring your own supplies and equipment?</summary><p>Yes. We bring all cleaning products and tools. We use effective, low-fragrance, pet- and kid-friendly formulas. If you prefer us to use your products, just let us know when booking.</p></details>
       <details class="faq-item reveal"><summary>What if I need to reschedule or cancel?</summary><p>Just give us at least 24 hours notice and we will move your appointment at no charge. Last-minute cancellations may incur a small fee to cover the team time.</p></details>
@@ -75,7 +76,7 @@
       <details class="faq-item reveal"><summary>What areas do you serve?</summary><p>We currently cover the greater metro area and surrounding suburbs within about a 25-mile radius. If you are unsure whether we reach your postcode, just ask when you request a quote.</p></details>
       <details class="faq-item reveal"><summary>How long does a typical clean take?</summary><p>A regular clean for a typical 2 to 3 bedroom home usually takes 2.5 to 4 hours. Deep cleans and move-outs take longer. We will give you a realistic time window with your quote.</p></details>
       <details class="faq-item reveal"><summary>What if I am not happy with something?</summary><p>Tell us within 24 hours. We will come back and make it right at no extra cost. We would rather fix it than leave you frustrated.</p></details>
-      <details class="faq-item reveal"><summary>How should I prepare for the first visit?</summary><p>A light tidy of personal items helps us focus on cleaning rather than organizing. Clear kitchen counters and bathroom surfaces if you can — we will handle the rest.</p></details>
+      <details class="faq-item reveal"><summary>How should I prepare for the first visit?</summary><p>A light tidy of personal items helps us focus on cleaning rather than organizing. Clear kitchen counters and bathroom surfaces if you can, we will handle the rest.</p></details>
       <details class="faq-item reveal"><summary>Do you offer one-off cleans or only recurring?</summary><p>Both. Many people start with a deep clean and then decide whether to set up a regular schedule. There is no obligation to continue.</p></details>
       <div style="margin-top:48px;text-align:center" class="reveal">
         <p style="color:var(--muted);margin-bottom:18px;font-weight:300">Still have a question?</p>
@@ -99,6 +100,7 @@
   </script>
 
 
+  <script src="enhance.js" defer></script>
   <script src="widget.js" defer></script>
 </body>
 </html>

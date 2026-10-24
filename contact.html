@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add("js")</script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Contact & Book | SparklePro Home Cleaning</title>
   <meta name="description" content="Request a free quote or book a clean with SparklePro. Phone, email, service area and contact form.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
@@ -54,6 +55,7 @@
     @media(max-width:900px){.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.nav-left{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:640px){.footer-grid{grid-template-columns:1fr}section,.page-hero{padding:50px 22px}.nav{padding:15px 22px}}
   </style>
+  <link rel="stylesheet" href="enhance.css">
   <link rel="stylesheet" href="widget.css">
 </head>
 <body>
@@ -75,7 +77,6 @@
   </header>
 
   <div class="page-hero">
-    <p class="section-label">Contact / Book</p>
     <h1>Request a free quote</h1>
     <p>Tell us a little about your home and we will get back to you within one business day with a clear price.</p>
   </div>
@@ -182,6 +183,7 @@
     const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
     reveals.forEach(el=>observer.observe(el));
   </script>
+  <script src="enhance.js" defer></script>
   <script src="widget.js" defer></script>
 </body>
 </html>

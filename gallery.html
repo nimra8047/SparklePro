@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add("js")</script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Gallery | Before & After | SparklePro</title>
   <meta name="description" content="Real before-and-after photos from SparklePro home cleans. See the difference our team makes.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
@@ -72,6 +73,7 @@
     @media(max-width:900px){.ba-grid,.team-grid{grid-template-columns:1fr 1fr}.nav-left{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:640px){.ba-grid,.team-grid,.footer-grid{grid-template-columns:1fr}section,.page-hero{padding:50px 22px}.nav{padding:15px 22px}}
   </style>
+  <link rel="stylesheet" href="enhance.css">
   <link rel="stylesheet" href="widget.css">
 </head>
 <body>
@@ -93,20 +95,18 @@
   </header>
 
   <div class="page-hero">
-    <p class="section-label">Gallery</p>
     <h1>Proof, not promises</h1>
-    <p>Real rooms from recent jobs. Hover any card to watch a soft cleaning stroke reveal the finished result.</p>
+    <p>Real rooms from recent jobs. Watch a soft cleaning stroke reveal the finished result.</p>
   </div>
 
   <section style="background:var(--white)">
     <div class="container">
-      <p class="section-label reveal">Before & After</p>
-      <h2 class="section-title reveal">Hover to see the difference</h2>
+      <h2 class="section-title reveal">See the difference</h2>
       <div class="ba-grid">
         <div class="ba-card reveal-scale">
           <div class="ba-frame">
-            <img class="before" src="https://images.unsplash.com/photo-1649954596857-1e8c87d53ae3?auto=format&fit=crop&w=900&q=80" alt="Kitchen before">
-            <img class="after" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80" alt="Kitchen after">
+            <img class="before" src="images/kitchen-before.png" alt="Kitchen room before cleaning" loading="lazy">
+            <img class="after" src="images/kitchen-after.png" alt="Same kitchen room after SparklePro cleaning" loading="lazy">
             <div class="ba-blade"></div>
             <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
             <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
@@ -115,23 +115,23 @@
         </div>
         <div class="ba-card reveal-scale" style="transition-delay:.1s">
           <div class="ba-frame">
-            <img class="before" src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=900&q=80" alt="Bedroom before">
-            <img class="after" src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80" alt="Living after">
+            <img class="before" src="images/living-before.jpg" alt="Living room before cleaning" loading="lazy">
+            <img class="after" src="images/living-after.jpg" alt="Same living room after SparklePro cleaning" loading="lazy">
             <div class="ba-blade"></div>
             <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
             <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
           </div>
-          <div class="ba-caption"><h3>Bedroom & living</h3><span>Recurring visit</span></div>
+          <div class="ba-caption"><h3>Living room</h3><span>Recurring visit</span></div>
         </div>
         <div class="ba-card reveal-scale" style="transition-delay:.2s">
           <div class="ba-frame">
-            <img class="before" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Bathroom before">
-            <img class="after" src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80" alt="Bathroom after">
+            <img class="before" src="images/bedroom-before.jpg" alt="Bedroom room before cleaning" loading="lazy">
+            <img class="after" src="images/bedroom-after.jpg" alt="Same bedroom room after SparklePro cleaning" loading="lazy">
             <div class="ba-blade"></div>
             <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
             <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
           </div>
-          <div class="ba-caption"><h3>Bathroom detail</h3><span>Descaling + polish</span></div>
+          <div class="ba-caption"><h3>Bedroom reset</h3><span>Full clean</span></div>
         </div>
       </div>
     </div>
@@ -139,7 +139,6 @@
 
   <section>
     <div class="container">
-      <p class="section-label reveal">At work</p>
       <h2 class="section-title reveal">The team in action</h2>
       <p class="section-desc reveal">A few candid moments from recent cleans. We bring the supplies and the care.</p>
       <div class="team-grid">
@@ -179,6 +178,7 @@
     const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
     reveals.forEach(el=>observer.observe(el));
   </script>
+  <script src="enhance.js" defer></script>
   <script src="widget.js" defer></script>
 </body>
 </html>

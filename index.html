@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add("js")</script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>SparklePro | Professional Home Cleaning Services Near You</title>
   <meta name="description" content="SparklePro offers reliable home cleaning, deep cleaning, and move-in/move-out services. Fully insured local team. First clean 15% off. Book your free quote today.">
   <meta name="keywords" content="home cleaning service, deep cleaning, move out cleaning, residential cleaners, house cleaning near me, SparklePro">
@@ -167,6 +168,7 @@
       .avatar.a3,.avatar.a4,.avatar.a8{display:none}
     }
   </style>
+  <link rel="stylesheet" href="enhance.css">
   <link rel="stylesheet" href="widget.css">
 </head>
 <body>
@@ -195,7 +197,6 @@
   <section class="hero" id="hero">
     <div class="hero-bg" id="heroBg"></div>
     <div class="hero-content" id="heroContent">
-      <p class="eyebrow">Local · Insured · Consistent</p>
       <h1>Your home,<br>actually clean</h1>
       <p>SparklePro is a small, fully insured home cleaning team that shows up on time, deep-cleans the spots other services skip, and leaves your house feeling calm again.</p>
       <div class="hero-actions">
@@ -207,15 +208,12 @@
 
   <section aria-labelledby="services-heading">
     <div class="container">
-      <p class="section-label reveal">Home cleaning services</p>
       <h2 class="section-title reveal" id="services-heading">Professional cleaning for every kind of home</h2>
       <p class="section-desc reveal">From weekly upkeep to full move-out resets, our residential cleaners handle kitchens, bathrooms, floors, and the details that make a house feel truly clean.</p>
       <div class="services-preview">
         <article class="svc-card reveal">
           <div class="svc-visual">
-            <div class="svc-icon-wrap">
-              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V18l16-12 16 12v22H8z" stroke-linejoin="round"/><path d="M20 40V28h8v12"/><path d="M14 22h4M30 22h4M22 16v4"/></svg>
-            </div>
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Cleaner wiping down a surface during a regular home cleaning visit" loading="lazy" data-par>
           </div>
           <div class="svc-body">
             <h3>Regular home cleaning</h3>
@@ -228,9 +226,7 @@
         </article>
         <article class="svc-card reveal" style="transition-delay:.1s">
           <div class="svc-visual">
-            <div class="svc-icon-wrap">
-              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="10"/><path d="M24 8v4M24 36v4M8 24h4M36 24h4M12.5 12.5l2.8 2.8M32.7 32.7l2.8 2.8M12.5 35.5l2.8-2.8M32.7 15.3l2.8-2.8"/><path d="M18 24h12" stroke-linecap="round"/></svg>
-            </div>
+            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80" alt="Kitchen being deep cleaned by a SparklePro cleaner" loading="lazy" data-par>
           </div>
           <div class="svc-body">
             <h3>Deep cleaning</h3>
@@ -243,9 +239,7 @@
         </article>
         <article class="svc-card reveal" style="transition-delay:.2s">
           <div class="svc-visual">
-            <div class="svc-icon-wrap">
-              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 38V16l14-10 14 10v22H10z" stroke-linejoin="round"/><path d="M18 38V26h12v12"/><path d="M6 38h36" stroke-linecap="round"/><path d="M24 8v6"/></svg>
-            </div>
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Bright, organized empty home after a move-out clean" loading="lazy" data-par>
           </div>
           <div class="svc-body">
             <h3>Move-in / Move-out</h3>
@@ -269,14 +263,13 @@
 
   <section class="ba-section" id="results" aria-labelledby="results-heading">
     <div class="container">
-      <p class="section-label reveal">Before & after results</p>
       <h2 class="section-title reveal" id="results-heading">Real homes. Real difference.</h2>
-      <p class="section-desc reveal">Hover any photo to watch a soft cleaning stroke reveal the finished room. These are actual recent SparklePro jobs.</p>
+      <p class="section-desc reveal">Watch a soft cleaning stroke reveal the finished room. These are actual recent SparklePro jobs.</p>
       <div class="ba-grid">
         <div class="ba-card reveal-scale">
           <div class="ba-frame">
-            <img class="before" src="https://images.unsplash.com/photo-1649954596857-1e8c87d53ae3?auto=format&fit=crop&w=900&q=80" alt="Messy kitchen before professional home cleaning">
-            <img class="after" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80" alt="Sparkling clean kitchen after SparklePro deep clean">
+            <img class="before" src="images/kitchen-before.png" alt="Kitchen room before cleaning" loading="lazy">
+            <img class="after" src="images/kitchen-after.png" alt="Same kitchen room after SparklePro cleaning" loading="lazy">
             <div class="ba-blade"></div>
             <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
             <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
@@ -285,23 +278,23 @@
         </div>
         <div class="ba-card reveal-scale" style="transition-delay:.12s">
           <div class="ba-frame">
-            <img class="before" src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=900&q=80" alt="Cluttered bedroom before house cleaning">
-            <img class="after" src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80" alt="Tidy living area after regular home cleaning service">
+            <img class="before" src="images/living-before.jpg" alt="Living room before cleaning" loading="lazy">
+            <img class="after" src="images/living-after.jpg" alt="Same living room after SparklePro cleaning" loading="lazy">
             <div class="ba-blade"></div>
             <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
             <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
           </div>
-          <div class="ba-caption"><h3>Bedroom & living</h3><span>Recurring visit</span></div>
+          <div class="ba-caption"><h3>Living room</h3><span>Recurring visit</span></div>
         </div>
         <div class="ba-card reveal-scale" style="transition-delay:.24s">
           <div class="ba-frame">
-            <img class="before" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Bathroom before descaling and deep clean">
-            <img class="after" src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80" alt="Fresh bathroom after professional deep cleaning">
+            <img class="before" src="images/bedroom-before.jpg" alt="Bedroom room before cleaning" loading="lazy">
+            <img class="after" src="images/bedroom-after.jpg" alt="Same bedroom room after SparklePro cleaning" loading="lazy">
             <div class="ba-blade"></div>
             <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
             <div class="ba-status"><span class="before-text">Before</span><span class="after-text">After</span></div>
           </div>
-          <div class="ba-caption"><h3>Bathroom detail</h3><span>Descaling + polish</span></div>
+          <div class="ba-caption"><h3>Bedroom reset</h3><span>Full clean</span></div>
         </div>
       </div>
     </div>
@@ -309,27 +302,26 @@
 
   <section class="reviews-section" id="reviews" aria-labelledby="reviews-heading">
     <div class="container">
-      <p class="section-label reveal">Client reviews</p>
-      <h2 class="section-title reveal" id="reviews-heading">Hover a face. Read their story.</h2>
+      <h2 class="section-title reveal" id="reviews-heading">Hear it from our clients.</h2>
       <p class="section-desc reveal">Real feedback from homeowners who trust SparklePro with their kitchens, bathrooms, and busy family spaces.</p>
       <div class="review-stage reveal">
-        <div class="avatar a1"><div class="pic"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Sarah M. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"I stopped feeling guilty about the weekends. They come every other Tuesday and the kitchen stays under control."</p><div class="name">Sarah M. <span>· Bi-weekly</span></div></div>
+        <div class="avatar a1"><div class="pic"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Sarah M. client photo"></div><div class="bubble"><p>"I stopped feeling guilty about the weekends. They come every other Tuesday and the kitchen stays under control."</p><div class="name">Sarah M. <span>· Bi-weekly</span></div></div>
         </div>
-        <div class="avatar a2"><div class="pic"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="David K. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Move-out clean passed inspection with zero notes. Clear pricing and they cleaned inside the cupboards."</p><div class="name">David K. <span>· Move-out</span></div></div>
+        <div class="avatar a2"><div class="pic"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="David K. client photo"></div><div class="bubble"><p>"Move-out clean passed inspection with zero notes. Clear pricing and they cleaned inside the cupboards."</p><div class="name">David K. <span>· Move-out</span></div></div>
         </div>
-        <div class="avatar a3"><div class="pic"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="Priya N. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Two kids and a dog. Same two cleaners every time — that consistency is rare and it matters."</p><div class="name">Priya N. <span>· Weekly</span></div></div>
+        <div class="avatar a3"><div class="pic"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="Priya N. client photo"></div><div class="bubble"><p>"Two kids and a dog. Same two cleaners every time, that consistency is rare and it matters."</p><div class="name">Priya N. <span>· Weekly</span></div></div>
         </div>
-        <div class="avatar a4"><div class="pic"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="James R. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Deep clean was excellent. They noted our preferences and the regular visits have been just as thorough."</p><div class="name">James R. <span>· Deep + recurring</span></div></div>
+        <div class="avatar a4"><div class="pic"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="James R. client photo"></div><div class="bubble"><p>"Deep clean was excellent. They noted our preferences and the regular visits have been just as thorough."</p><div class="name">James R. <span>· Deep + recurring</span></div></div>
         </div>
-        <div class="avatar a5"><div class="pic"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Elena T. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Post-renovation clean left the place ready to move into. Fair price for the amount of dust and debris."</p><div class="name">Elena T. <span>· Post-reno</span></div></div>
+        <div class="avatar a5"><div class="pic"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Elena T. client photo"></div><div class="bubble"><p>"Post-renovation clean left the place ready to move into. Fair price for the amount of dust and debris."</p><div class="name">Elena T. <span>· Post-reno</span></div></div>
         </div>
-        <div class="avatar a6"><div class="pic"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Marcus L. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"We've tried three other services. SparklePro is the first that shows up when they say and does the job properly."</p><div class="name">Marcus L. <span>· Bi-weekly</span></div></div>
+        <div class="avatar a6"><div class="pic"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Marcus L. client photo"></div><div class="bubble"><p>"We've tried three other services. SparklePro is the first that shows up when they say and does the job properly."</p><div class="name">Marcus L. <span>· Bi-weekly</span></div></div>
         </div>
-        <div class="avatar a7"><div class="pic"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Ana L. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Communication is easy, no upselling, and the bathrooms actually look and smell clean for days."</p><div class="name">Ana L. <span>· Weekly</span></div></div>
+        <div class="avatar a7"><div class="pic"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Ana L. client photo"></div><div class="bubble"><p>"Communication is easy, no upselling, and the bathrooms actually look and smell clean for days."</p><div class="name">Ana L. <span>· Weekly</span></div></div>
         </div>
-        <div class="avatar a8"><div class="pic"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Lena K. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Booked for end of tenancy. Keys handed over the same afternoon. Would use again in a heartbeat."</p><div class="name">Lena K. <span>· Move-out</span></div></div>
+        <div class="avatar a8"><div class="pic"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Lena K. client photo"></div><div class="bubble"><p>"Booked for end of tenancy. Keys handed over the same afternoon. Would use again in a heartbeat."</p><div class="name">Lena K. <span>· Move-out</span></div></div>
         </div>
-        <div class="avatar a9"><div class="pic"><img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80" alt="Tom H. client photo"></div><div class="bubble"><div class="stars">★★★★★</div><p>"Reliable, careful with our furniture, and the quote matched the final invoice. Refreshing honesty."</p><div class="name">Tom H. <span>· Regular</span></div></div>
+        <div class="avatar a9"><div class="pic"><img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80" alt="Tom H. client photo"></div><div class="bubble"><p>"Reliable, careful with our furniture, and the quote matched the final invoice. Refreshing honesty."</p><div class="name">Tom H. <span>· Regular</span></div></div>
         </div>
       </div>
       <div style="text-align:center;margin-top:20px" class="reveal">
@@ -348,7 +340,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">SparklePro<span>.</span></div>
-        <p>Professional home cleaning services — regular, deep, and move-out cleans by a fully insured local team.</p>
+        <p>Professional home cleaning services, regular, deep, and move-out cleans by a fully insured local team.</p>
       </div>
       <div class="footer-col">
         <h4>Pages</h4>
@@ -376,37 +368,11 @@
 
   <script>
     window.addEventListener('load',()=>setTimeout(()=>document.getElementById('intro').classList.add('hide'),2200));
-    const header=document.getElementById('header');
-    const progress=document.getElementById('progress');
-    const heroBg=document.getElementById('heroBg');
-    const heroContent=document.getElementById('heroContent');
-    const bandText=document.getElementById('bandText');
-    function onScroll(){
-      const sy=window.scrollY;
-      const docH=document.documentElement.scrollHeight-window.innerHeight;
-      progress.style.width=(sy/docH*100)+'%';
-      header.classList.toggle('scrolled',sy>40);
-      if(sy<window.innerHeight){
-        const p=sy/window.innerHeight;
-        heroBg.style.transform=`scale(${1.08-p*0.06}) translateY(${sy*0.35}px)`;
-        heroContent.style.transform=`translateY(${sy*0.18}px)`;
-        heroContent.style.opacity=Math.max(0,1-p*1.15);
-      }
-      const band=document.querySelector('.sticky-band');
-      if(band){
-        const r=band.getBoundingClientRect();
-        const mid=window.innerHeight/2;
-        const dist=Math.abs(r.top+r.height/2-mid);
-        const active=dist<r.height*0.55;
-        bandText.classList.toggle('active',active);
-        if(active){const t=1-dist/(r.height*0.55);bandText.style.transform=`scale(${0.88+t*0.12})`;}
-      }
-    }
+    const header=document.getElementById('header'),progress=document.getElementById('progress');
+    function onScroll(){const sy=window.scrollY,docH=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(docH>0?sy/docH*100:0)+'%';header.classList.toggle('scrolled',sy>40);}
     window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-    const reveals=document.querySelectorAll('.reveal,.reveal-scale');
-    const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-    reveals.forEach(el=>observer.observe(el));
   </script>
+  <script src="enhance.js" defer></script>
   <script src="widget.js" defer></script>
 </body>
 </html>

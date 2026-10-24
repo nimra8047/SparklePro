@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add("js")</script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Reviews | SparklePro Home Cleaning</title>
   <meta name="description" content="Real client reviews for SparklePro. See what homeowners say about our regular cleans, deep cleans and move-out service.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
@@ -45,6 +46,7 @@
     @media(max-width:900px){.testimonials-grid{grid-template-columns:1fr}.nav-left{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:640px){.footer-grid{grid-template-columns:1fr}section,.page-hero{padding:50px 22px}.nav{padding:15px 22px}}
   </style>
+  <link rel="stylesheet" href="enhance.css">
   <link rel="stylesheet" href="widget.css">
 </head>
 <body>
@@ -66,7 +68,6 @@
   </header>
 
   <div class="page-hero">
-    <p class="section-label">Reviews</p>
     <h1>What clients say after a few visits</h1>
     <p>We’re not perfect, but we show up and we care. Here’s feedback from regulars and one-off clients.</p>
   </div>
@@ -75,32 +76,26 @@
     <div class="container">
       <div class="testimonials-grid">
         <div class="testimonial reveal">
-          <div class="stars">★★★★★</div>
           <p>“I stopped feeling guilty about the weekends. They come every other Tuesday, the kitchen and bathrooms stay under control, and I finally have time for other things.”</p>
           <div class="author">Sarah M.<span>Bi-weekly · 11 months</span></div>
         </div>
         <div class="testimonial reveal" style="transition-delay:.08s">
-          <div class="stars">★★★★★</div>
           <p>“Move-out clean passed the inspection without any notes. Clear pricing, on time, and they actually cleaned inside the cupboards. Would use again in a heartbeat.”</p>
           <div class="author">David & Lena K.<span>Move-out clean</span></div>
         </div>
         <div class="testimonial reveal">
-          <div class="stars">★★★★★</div>
-          <p>“Two kids, a dog, and a husband who tracks everything in. SparklePro keeps us from drowning. Same two women every time — that consistency matters.”</p>
+          <p>“Two kids, a dog, and a husband who tracks everything in. SparklePro keeps us from drowning. Same two women every time, that consistency matters.”</p>
           <div class="author">Priya N.<span>Weekly service</span></div>
         </div>
         <div class="testimonial reveal" style="transition-delay:.08s">
-          <div class="stars">★★★★★</div>
           <p>“First deep clean was excellent. They noted our preferences and the next regular visits have been just as thorough. Communication is easy and no upselling.”</p>
           <div class="author">James R.<span>Deep + recurring</span></div>
         </div>
         <div class="testimonial reveal">
-          <div class="stars">★★★★★</div>
           <p>“Booked for a post-renovation clean. The place was dusty and full of debris. They left it ready to move into. Fair price for the amount of work.”</p>
           <div class="author">Elena T.<span>Post-renovation</span></div>
         </div>
         <div class="testimonial reveal" style="transition-delay:.08s">
-          <div class="stars">★★★★★</div>
           <p>“We’ve tried three other services. SparklePro is the first that actually shows up when they say they will and does the job properly. That’s rare.”</p>
           <div class="author">Marcus & Ana L.<span>Bi-weekly · 8 months</span></div>
         </div>
@@ -131,6 +126,7 @@
     const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
     reveals.forEach(el=>observer.observe(el));
   </script>
+  <script src="enhance.js" defer></script>
   <script src="widget.js" defer></script>
 </body>
 </html>
